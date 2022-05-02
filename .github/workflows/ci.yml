@@ -62,7 +62,7 @@ jobs:
           load: false
           pull: false
           push: true # ${{ github.event_name == "pull_request" }}    
-          tags: ghcr.io/${{ env.IMAGE_REPO }}:$latest
+          tags: ghcr.io/${{ env.IMAGE_REPO }}:latest
       
       - name: Image digest
         run: |
