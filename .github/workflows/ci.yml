@@ -6,7 +6,7 @@ env:
   python_version: 3.9
   # Variables used to configure
   IMAGE_REGISTRY: ghcr.io
-  IMAGE_REPO: jasilez/fast-api-lab
+  IMAGE_REPO: ${{ github.actor }}/fastapi-lab
   VERSION: develop
 
 jobs:
