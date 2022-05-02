@@ -8,7 +8,7 @@ on:
 env:
   python_version: 3.9
   # Variables used to configure
-  IMAGE_REGISTRY: ghcr.io
+  REGISTRY: ghcr.io
   REPOSITORY : jasilez/fastapi-lab
 
 jobs:
