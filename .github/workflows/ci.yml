@@ -67,24 +67,3 @@ jobs:
       - name: Image digest
         run: |
           echo ${{ steps.docker_build.outputs.digest }}
-          
-
-      - name: Public IP
-        id: ip
-        uses: haythem/public-ip@v1.2
-
-      - name: Print Public IP & Docker Run
-        run: |
-          echo ${{ steps.ip.outputs.ipv4 }}
-          echo ${{ steps.ip.outputs.ipv6 }}
-          docker run -p 8000:8000 -p 8081:8081 --name simple-server ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_REPO }}:latest
-
-# -d 
-
-      - name: Print Public IP & Docker Run
-        run: |
-          echo ${{ steps.ip.outputs.ipv4 }}
-          echo ${{ steps.ip.outputs.ipv6 }}
-          docker stop simple-server
-          docker rmi  ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_REPO }}:latest
-  
